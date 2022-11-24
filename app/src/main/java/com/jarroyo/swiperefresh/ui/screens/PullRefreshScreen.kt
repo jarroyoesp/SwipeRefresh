@@ -37,9 +37,7 @@ fun PullRefreshScreen(navController: NavController) {
         LazyColumn(Modifier.fillMaxSize()) {
             if (!refreshing) {
                 items(itemCount) {
-                    ListItem(modifier = Modifier.clickable {
-                        navController.navigate(Screens.SwipeRefresh.route)
-                    }) { Text(text = "Item ${itemCount - it}") }
+                    ListItem { Text(text = "Item ${itemCount - it}") }
                 }
             }
         }
